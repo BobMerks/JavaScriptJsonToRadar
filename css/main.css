@@ -1,0 +1,76 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.responsegraph-container {
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px #00000030;
+  background-color: white;
+  height: 30vw;
+  width: 40vw;
+  padding: 25px 35px;
+  animation: animateContainer 1000ms cubic-bezier(0.5, 0, 0.2, 1);
+}
+
+.graph-container {
+  height: 92%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+@keyframes animateContainer {
+  0% {
+    transform: scale(0.5, 0.5);
+    opacity: 0;
+    border-radius: 25px;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.result-title {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+/* Duplicated styling from project*/
+.waves-container {
+  top: 0;
+  z-index: -1;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: #4423d6;
+}
+.svg-waves {
+  height: 100%;
+  width: 100%;
+}
+
+.svg-waves > path {
+  background: #a895ff;
+  opacity: 15%;
+  width: 100%;
+  height: 50%;
+  animation: animateWave 1000ms cubic-bezier(0.5, 0, 0.2, 1);
+}
+
+@keyframes animateWave {
+  0% {
+    transform: scale(1, 2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
